@@ -1,4 +1,7 @@
 .idea
+out/*
+src/main/java/com/uh635c/javacore/chapter18/Test.java
+
 
 *.class
 

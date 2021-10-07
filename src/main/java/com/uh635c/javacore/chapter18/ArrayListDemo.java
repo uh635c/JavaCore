@@ -15,6 +15,7 @@ public class ArrayListDemo {
         al.add("B");
         al.add("D");
         al.add("F");
+        al.add(1, "A2");
         System.out.println("Размер списочного массива al после ввода элементов: " + al.size());
 
         //вывести список массива

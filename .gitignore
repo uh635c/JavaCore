@@ -1,0 +1,10 @@
+.idea
+
+out/*
+
+Test.java
+*.class
+
+*.war
+*.jar
+*.ear

@@ -10,8 +10,8 @@ public class HashMapDemo {
         //ввести элементы в хеш-отображение
         hm.put("Джон Доу", new Double(3434.34));
         hm.put("Том Смит", new Double(123.22));
-        hm.put("Джуйн Бейкер", new Double(1378.00));
-        hm.put("Тщд Холл", new Double(99.22));
+        hm.put("Джейн Бейкер", new Double(1378.00));
+        hm.put("Тод Холл", new Double(99.22));
         hm.put("Ральф Смит", new Double(-19.08));
 
         //получить множество записей

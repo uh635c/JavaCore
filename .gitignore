@@ -1,5 +1,7 @@
 .idea
 
+phonebook.dat
+
 out/*
 
 Test.java

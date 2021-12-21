@@ -1,5 +1,6 @@
 package main.java.com.uh635c.javacore.chapter19;
 
+import java.util.Formatter;
 import java.util.Scanner;
 
 public class AvgNums {
@@ -10,6 +11,7 @@ public class AvgNums {
         System.out.println("Enter numbers to average.");
 // Read and sum numbers.
         while(conin.hasNext()) {
+            System.out.println(" - ");
             if(conin.hasNextDouble()) {
                 sum += conin.nextDouble();
                 count++;

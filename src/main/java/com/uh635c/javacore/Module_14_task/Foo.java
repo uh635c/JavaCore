@@ -1,44 +1,25 @@
 package main.java.com.uh635c.javacore.Module_14_task;
 
 import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
-public class Foo implements Runnable {
-    private static AtomicInteger counter = new AtomicInteger(1);
+public class Foo {
     Phaser phaser = new Phaser(3);
 
-    public  void first() {
+    public  void first(Runnable r) {
         System.out.println(("first"));
+        phaser.arriveAndDeregister();
     }
 
-    public  void second() {
+    public  void second(Runnable r) {
+        phaser.arriveAndAwaitAdvance();
         System.out.println("second");
+        phaser.arriveAndDeregister();
     }
 
-    public  void third() {
+    public  void third(Runnable r) {
+        phaser.arriveAndAwaitAdvance();
+        phaser.arriveAndAwaitAdvance();
         System.out.println("third");
-    }
-
-
-    @Override
-    public void run() {
-        int threadNumber = counter.getAndAdd(1);
-
-        if (threadNumber == 2 || threadNumber == 3) {
-            phaser.arriveAndAwaitAdvance();
-        } else {
-            first();
-            phaser.arriveAndDeregister();
-            return;
-        }
-        if (threadNumber == 2) {
-            phaser.arriveAndAwaitAdvance();
-        } else {
-            second();
-            phaser.arriveAndDeregister();
-            return;
-        }
-        third();
         phaser.arriveAndDeregister();
     }
 }
